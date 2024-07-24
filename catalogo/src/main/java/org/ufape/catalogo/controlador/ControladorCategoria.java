@@ -5,11 +5,7 @@ import java.util.List;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
 import org.ufape.catalogo.basica.Categoria;
@@ -43,6 +39,16 @@ public class ControladorCategoria {
 	@GetMapping("/categoria/{id}")
 	CategoriaResponse carregarCategoria(@PathVariable long id) {
 		return new CategoriaResponse(catalogo.encontrarCategoria(id));
+	}
+
+	@DeleteMapping("/categoria")
+	void apagarCategoria(@Valid @RequestBody CategoriaRequest obj) {
+		catalogo.apagarCategoria(obj.converterParaClasseBasica());
+	}
+
+	@DeleteMapping("/categoria/{id}")
+	void apagarCategoria(@PathVariable long id) {
+		catalogo.apagarCategoria(id);
 	}
 
 }

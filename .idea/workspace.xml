@@ -5,39 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de5eb47e-8e26-45c6-b781-7cab327828ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/forwardedPorts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/CatalogoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/basica/Categoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/basica/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/CadastroCategoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/CadastroProduto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/InterfaceCadastroCategoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/InterfaceCadastroProduto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/ObjetoNaoEncontradoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/RegistroDuplicadoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/config/ConfiguracaoModelMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/config/SpringApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/config/TratadorDeExcecaoCustomizada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/config/TratadorDeExcecaoPadrao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/ControladorCategoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/requisicao/CategoriaRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/resposta/CategoriaResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/fachada/Catalogo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/repositorio/RepositorioCategoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/repositorio/RepositorioProduto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogo/src/test/java/org/ufape/catalogo/CatalogoApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/ControladorCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/ControladorCategoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/requisicao/CategoriaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/requisicao/CategoriaRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,35 +19,48 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PedroViniciusMelo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/PedroViniciusMelo/servicos.git&quot;,
+    &quot;accountId&quot;: &quot;0a957f55-d6c4-417b-9b2b-eaa9bc35a792&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2jhO1sCLlx1q5OQdfNGDC71oH9F" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.CatalogoApplication (1).executor": "Run",
-    "Spring Boot.CatalogoApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/root/servicos/catalogo/pom.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CatalogoApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.CatalogoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/root/servicos/catalogo/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
@@ -83,65 +68,57 @@
       <window_info id="Merge Requests" show_stripe_button="false" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
+      <window_info id="Persistence" side_tool="true" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.32984102" />
-      <window_info active="true" id="Commit" order="1" visible="true" weight="0.32984102" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3302967" />
+      <window_info id="Commit" order="1" weight="0.32984102" />
+      <window_info id="Welcome to GitHub Copilot" order="2" show_stripe_button="false" weight="0.33011824" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
       <window_info anchor="bottom" id="Profiler" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" />
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.2840447" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.5960366" />
-      <window_info anchor="bottom" id="Services" order="4" />
-      <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.2840447" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.3887195" />
+      <window_info anchor="bottom" id="Services" order="5" />
       <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" id="Beans" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
-      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.33011824" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <window_info active="true" anchor="right" id="Endpoints" order="4" visible="true" weight="0.3401874" />
+      <window_info anchor="right" id="github.copilotToolWindow" order="4" show_stripe_button="false" />
     </layout>
   </component>
-  <component name="RunManager" selected="Spring Boot.CatalogoApplication (1)">
-    <configuration name="CatalogoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="catalogo" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.ufape.catalogo.CatalogoApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.ufape.catalogo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.ufape.catalogo.controlador.resposta" />
+      <recent name="org.ufape.catalogo.controlador.requisicao" />
+      <recent name="org.ufape.catalogo.controlador" />
+    </key>
+  </component>
+  <component name="RunManager">
     <configuration name="CatalogoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="catalogo" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.ufape.servicos.catalogo.CatalogoApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.ufape.catalogo.CatalogoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.CatalogoApplication (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.91" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.91" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -154,6 +131,9 @@
       <option name="presentableId" value="Default" />
       <updated>1721835630694</updated>
       <workItem from="1721835632874" duration="670000" />
+      <workItem from="1721844883492" duration="64000" />
+      <workItem from="1721845128610" duration="715000" />
+      <workItem from="1721845984583" duration="1876000" />
     </task>
     <servers />
   </component>

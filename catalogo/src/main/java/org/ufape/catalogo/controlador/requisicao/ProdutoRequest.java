@@ -1,22 +1,25 @@
 package org.ufape.catalogo.controlador.requisicao;
 
-import org.modelmapper.ModelMapper;
-
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
+import org.modelmapper.ModelMapper;
 import org.ufape.catalogo.basica.Categoria;
+import org.ufape.catalogo.basica.Produto;
 import org.ufape.catalogo.config.SpringApplicationContext;
 
 @Getter @Setter
-public class CategoriaRequest {
+public class ProdutoRequest {
 	@NotBlank(message ="O nome da categoria é obrigatório")
 	private String nome;
 	private String descricao;
-	private String icone;
+	private String imagem;
 
-	public Categoria converterParaClasseBasica() {
+	public Produto converterParaClasseBasica() {
 		ModelMapper modelMapper = (ModelMapper) SpringApplicationContext.getBean("modelMapper");
-        return modelMapper.map(this, Categoria.class);
+        return modelMapper.map(this, Produto.class);
+		
 	}
+	
+	
 }
