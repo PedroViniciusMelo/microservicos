@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de5eb47e-8e26-45c6-b781-7cab327828ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="de5eb47e-8e26-45c6-b781-7cab327828ad" name="Changes" comment="Added Produto endpoints">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/CadastroCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/CadastroCategoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/InterfaceCadastroCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/InterfaceCadastroCategoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/ControladorCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/ControladorCategoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/requisicao/CategoriaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/requisicao/CategoriaRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/fachada/Catalogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/fachada/Catalogo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +29,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/PedroViniciusMelo/servicos.git&quot;,
-    &quot;accountId&quot;: &quot;0a957f55-d6c4-417b-9b2b-eaa9bc35a792&quot;
+    &quot;accountId&quot;: &quot;794cb02f-cb7f-4056-be5a-226511707b95&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -65,37 +66,37 @@
     <layout>
       <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
       <window_info id="ORM" side_tool="true" />
-      <window_info id="Merge Requests" show_stripe_button="false" />
+      <window_info id="Merge Requests" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Persistence" side_tool="true" />
-      <window_info id="Learn" show_stripe_button="false" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3302967" />
-      <window_info id="Commit" order="1" weight="0.32984102" />
+      <window_info id="Learn" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3302967" />
+      <window_info id="Commit" order="1" weight="0.3302967" />
       <window_info id="Welcome to GitHub Copilot" order="2" show_stripe_button="false" weight="0.33011824" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Profiler" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Profiler" />
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" />
+      <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.32977644" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.2840447" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.3887195" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.32977644" />
+      <window_info anchor="bottom" id="Build" order="5" weight="0.32977644" />
       <window_info anchor="bottom" id="Services" order="5" />
-      <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32977644" />
+      <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" id="Beans" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
       <window_info anchor="right" id="Database" order="2" weight="0.33011824" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
-      <window_info active="true" anchor="right" id="Endpoints" order="4" visible="true" weight="0.3401874" />
-      <window_info anchor="right" id="github.copilotToolWindow" order="4" show_stripe_button="false" />
+      <window_info active="true" anchor="right" id="Endpoints" order="5" visible="true" weight="0.32977617" />
+      <window_info anchor="right" id="github.copilotToolWindow" order="6" show_stripe_button="false" />
     </layout>
   </component>
   <component name="RecentsManager">
@@ -133,12 +134,41 @@
       <workItem from="1721835632874" duration="670000" />
       <workItem from="1721844883492" duration="64000" />
       <workItem from="1721845128610" duration="715000" />
-      <workItem from="1721845984583" duration="1876000" />
+      <workItem from="1721845984583" duration="2316000" />
+      <workItem from="1721993149607" duration="706000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Produto endpoints">
+      <option name="closed" value="true" />
+      <created>1721847960475</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721847960475</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Produto endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Produto endpoints" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/InterfaceCadastroCategoria.java</url>
+          <line>17</line>
+          <properties class="org.ufape.catalogo.cadastro.InterfaceCadastroCategoria" method="atualizarCategoria">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

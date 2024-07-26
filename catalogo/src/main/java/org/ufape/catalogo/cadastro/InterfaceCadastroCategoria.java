@@ -13,8 +13,8 @@ public interface InterfaceCadastroCategoria {
 
 	void apagarCategoria(Long id);
 
-	void apagarCategoria(Categoria entity);
-
 	Categoria encontrarCategoria(Long id);
+
+	Categoria atualizarCategoria(Long id, Categoria categoria);
 
 }

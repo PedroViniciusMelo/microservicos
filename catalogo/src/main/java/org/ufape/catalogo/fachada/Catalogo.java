@@ -26,11 +26,11 @@ public class Catalogo {
 	public void apagarCategoria(Long id) {
 		cadastroCategoria.apagarCategoria(id);
 	}
-	public void apagarCategoria(Categoria entity) {
-		cadastroCategoria.apagarCategoria(entity);
-	}
 	public Categoria encontrarCategoria(Long id) {
 		return cadastroCategoria.encontrarCategoria(id);
+	}
+	public Categoria atualizarCategoria(Long id, Categoria categoria ) {
+		return cadastroCategoria.atualizarCategoria(id, categoria);
 	}
 	public List<Produto> listarProdutos(String descricao) {
 		return cadastroProduto.listarProdutos(descricao);

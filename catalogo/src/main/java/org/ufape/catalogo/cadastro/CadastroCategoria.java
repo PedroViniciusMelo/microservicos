@@ -34,11 +34,6 @@ public class CadastroCategoria implements InterfaceCadastroCategoria {
 	}
 
 	@Override
-	public void apagarCategoria(Categoria entity) {
-		repositorioCategoria.delete(entity);
-	}
-
-	@Override
 	public Categoria encontrarCategoria(Long id) {
 		Optional<Categoria> optional = repositorioCategoria.findById(id);
 		if(optional.isPresent()) {
@@ -47,5 +42,18 @@ public class CadastroCategoria implements InterfaceCadastroCategoria {
 			throw new ObjetoNaoEncontradoException("Não existe categoria com o id: " + id);
 		}
 	}
-	
+
+	@Override
+	public Categoria atualizarCategoria(Long id, Categoria categoria) {
+		Optional<Categoria> optional = repositorioCategoria.findById(id);
+		if(optional.isPresent()) {
+			Categoria categoriaAtual = optional.get();
+			categoriaAtual.setNome(categoria.getNome());
+			categoriaAtual.setDescricao(categoria.getDescricao());
+			categoriaAtual.setIcone(categoria.getIcone());
+			return repositorioCategoria.save(categoriaAtual);
+		} else {
+			throw new ObjetoNaoEncontradoException("Não existe categoria com o id: " + id);
+		}
+ 	}
 }

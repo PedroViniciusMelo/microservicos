@@ -26,8 +26,7 @@ public class ControladorCategoria {
 	Categoria cadastrarCategoria (@Valid @RequestBody CategoriaRequest newObj) {
 		return catalogo.salvarCategoria(newObj.converterParaClasseBasica());
 	}
-	
-	
+
 	@GetMapping("/categoria")
 	List<CategoriaResponse> listarCategorias() {
 		List<CategoriaResponse> response = new ArrayList<CategoriaResponse>();
@@ -41,14 +40,13 @@ public class ControladorCategoria {
 		return new CategoriaResponse(catalogo.encontrarCategoria(id));
 	}
 
-	@DeleteMapping("/categoria")
-	void apagarCategoria(@Valid @RequestBody CategoriaRequest obj) {
-		catalogo.apagarCategoria(obj.converterParaClasseBasica());
-	}
-
 	@DeleteMapping("/categoria/{id}")
 	void apagarCategoria(@PathVariable long id) {
 		catalogo.apagarCategoria(id);
 	}
 
+	@PutMapping("/categoria/{id}")
+	CategoriaResponse atualizarCategoria(@PathVariable long id, @Valid @RequestBody CategoriaRequest newObj) {
+		return new CategoriaResponse(catalogo.atualizarCategoria(id, newObj.converterParaClasseBasica()));
+	}
 }
