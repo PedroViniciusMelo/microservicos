@@ -1,11 +1,11 @@
 spring.application.name: catalogo
-server.port: 8084
+server.port: 8087
 
 spring:
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://127.0.0.1:5432/catalogo
-    username: topicos
+    username: postgres
     password: docker
   jpa:
     hibernate:
