@@ -51,14 +51,9 @@ public class ControladorProduto {
 		return response;
 	}
 
-//	@GetMapping("/produto/{id}")
-//	ProdutoResponse carregarProduto(@PathVariable long id) {
-//		return new ProdutoResponse(catalogo.encontrarProdutoId(id));
-//	}
-
-	@DeleteMapping("/produto")
-	void apagarProduto(@Valid @RequestBody ProdutoRequest obj) {
-		catalogo.apagarProduto(obj.converterParaClasseBasica());
+	@GetMapping("/produto/{id}")
+	ProdutoResponse encontrarProdutoId(@PathVariable long id) {
+		return new ProdutoResponse(catalogo.encontrarProdutoId(id));
 	}
 
 	@DeleteMapping("/produto/{id}")

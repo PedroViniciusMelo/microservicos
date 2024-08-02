@@ -5,17 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de5eb47e-8e26-45c6-b781-7cab327828ad" name="Changes" comment="Added Produto endpoints">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/basica/Armazem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/basica/EstoqueProduto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/cadastro/CadastroArmazem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/cadastro/CadastroEstoqueProduto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/cadastro/InterfaceCadastroArmazem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/cadastro/InterfaceCadastroEstoqueProduto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/cadastro/ObjetoNaoEncontradoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/cadastro/RegistroDuplicadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/config/ConfiguracaoModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/config/SpringApplicationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/config/TratadorDeExcecaoPadrao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/config/TratadorDeExecucaoCustomizada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/controlador/ControladorArmazem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/controlador/ControladorEstoqueProduto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/controlador/requisicao/ArmazemRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/controlador/requisicao/EstoqueProdutoRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/controlador/resposta/ArmazemResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/controlador/resposta/EstoqueProdutoResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/fachada/Estoque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/repositorio/RepositorioArmazem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque/repositorio/RepositorioEstoqueProduto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/CadastroCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/CadastroCategoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/InterfaceCadastroCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/cadastro/InterfaceCadastroCategoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/ControladorCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/controlador/ControladorCategoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/fachada/Catalogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/fachada/Catalogo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,27 +69,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.CatalogoApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.CatalogoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/root/servicos/catalogo/pom.xml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.CatalogoApplication (1).executor": "Run",
+    "Spring Boot.CatalogoApplication.executor": "Run",
+    "Spring Boot.EstoqueApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "jbr-17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/maria-virginia/Web/agiota",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
@@ -100,16 +134,26 @@
     </layout>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/estoque/src/main/java/org/ufape/estoque" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.ufape.catalogo.controlador.resposta" />
       <recent name="org.ufape.catalogo.controlador.requisicao" />
       <recent name="org.ufape.catalogo.controlador" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.EstoqueApplication">
     <configuration name="CatalogoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="catalogo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.ufape.catalogo.CatalogoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EstoqueApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="estoque" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.ufape.estoque.EstoqueApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,6 +180,12 @@
       <workItem from="1721845128610" duration="715000" />
       <workItem from="1721845984583" duration="2316000" />
       <workItem from="1721993149607" duration="706000" />
+      <workItem from="1722184324874" duration="85000" />
+      <workItem from="1722184415350" duration="389000" />
+      <workItem from="1722184809658" duration="2827000" />
+      <workItem from="1722187644499" duration="5553000" />
+      <workItem from="1722268936962" duration="12283000" />
+      <workItem from="1722359157346" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="Added Produto endpoints">
       <option name="closed" value="true" />
@@ -166,6 +216,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/catalogo/src/main/java/org/ufape/catalogo/config/SpringApplicationContext.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

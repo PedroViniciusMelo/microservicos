@@ -35,19 +35,18 @@ public class CadastroProduto implements InterfaceCadastroProduto {
 	}
 
 	@Override
-	public Optional<Produto> encontrarProdutoId(Long id) {
-		return repositorioProduto.findById(id);
+	public Produto encontrarProdutoId(Long id) {
+		Optional<Produto> optional = repositorioProduto.findById(id);
+
+		if(optional.isPresent()) {
+			return optional.get();
+		} else {
+			throw new ObjetoNaoEncontradoException("Não existe categoria com o id: " + id);
+		}
 	}
 
 	@Override
 	public void apagarProduto(Long id) {
 		repositorioProduto.deleteById(id);
 	}
-
-	@Override
-	public void apagarProduto(Produto entity) {
-		repositorioProduto.delete(entity);
-	}
-	
-
 }
