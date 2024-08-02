@@ -44,16 +44,10 @@ public class Catalogo {
 	public List<Produto> listarProdutos() {
 		return cadastroProduto.listarProdutos();
 	}
-	public Optional<Produto> encontrarProdutoId(Long id) {
+	public Produto encontrarProdutoId(Long id) {
 		return cadastroProduto.encontrarProdutoId(id);
 	}
 	public void apagarProduto(Long id) {
 		cadastroProduto.apagarProduto(id);
 	}
-	public void apagarProduto(Produto entity) {
-		cadastroProduto.apagarProduto(entity);
-	}
-	
-
-	
 }
