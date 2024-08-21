@@ -5,8 +5,9 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 import org.modelmapper.ModelMapper;
-import org.ufape.catalogo.config.SpringApplicationContext;
+
 import org.ufape.preco.basica.PrecoProduto;
+import org.ufape.preco.config.SpringApplicationContext;
 
 @Getter @Setter
 public class PrecoProdutoRequest {

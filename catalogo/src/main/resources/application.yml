@@ -1,14 +1,18 @@
-spring.application.name: catalogo
-server.port: 8087
-
 spring:
+  application:
+    name: catalogo
+
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://127.0.0.1:5432/catalogo
-    username: postgres
-    password: docker
+    url: jdbc:postgresql://catalogo-db:5432/catalogo
+    username: user_catalogo
+    password: password_catalogo
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
     database: postgresql
+
+server:
+  port: 8087

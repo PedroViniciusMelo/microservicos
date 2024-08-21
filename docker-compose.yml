@@ -1,0 +1,77 @@
+version: '2.1'
+
+services:
+  catalogo-db:
+    image: postgres:13
+    container_name: catalogo-db
+    environment:
+      POSTGRES_DB: catalogo
+      POSTGRES_USER: user_catalogo
+      POSTGRES_PASSWORD: password_catalogo
+    ports:
+      - "5433:5432" # Porta mapeada para evitar conflito com outras instâncias
+
+  catalogo:
+    build: catalogo
+    mem_limit: 512m
+    environment:
+      - DB_HOST=catalogo-db
+      - DB_PORT=5432
+      - DB_NAME=catalogo
+      - DB_USER=user_catalogo
+      - DB_PASSWORD=password_catalogo
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - catalogo-db
+    ports:
+      - "8087:8087"
+
+  preco-db:
+    image: postgres:13
+    container_name: preco-db
+    environment:
+      POSTGRES_DB: preco
+      POSTGRES_USER: user_preco
+      POSTGRES_PASSWORD: password_preco
+    ports:
+      - "5434:5432" # Porta mapeada para evitar conflito com outras instâncias
+
+  preco:
+    build: preco
+    mem_limit: 512m
+    environment:
+      - DB_HOST=preco-db
+      - DB_PORT=5432
+      - DB_NAME=preco
+      - DB_USER=user_preco
+      - DB_PASSWORD=password_preco
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - preco-db
+    ports:
+      - "8088:8088"
+
+  estoque-db:
+    image: postgres:13
+    container_name: estoque-db
+    environment:
+      POSTGRES_DB: estoque
+      POSTGRES_USER: user_estoque
+      POSTGRES_PASSWORD: password_estoque
+    ports:
+      - "5435:5432" # Porta mapeada para evitar conflito com outras instâncias
+
+  estoque:
+    build: estoque
+    mem_limit: 512m
+    environment:
+      - DB_HOST=estoque-db
+      - DB_PORT=5432
+      - DB_NAME=estoque
+      - DB_USER=user_estoque
+      - DB_PASSWORD=password_estoque
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - estoque-db
+    ports:
+      - "8089:8089"
