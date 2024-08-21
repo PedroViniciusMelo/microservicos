@@ -8,11 +8,11 @@
         <version>3.3.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.ufape.preco</groupId>
-    <artifactId>preco</artifactId>
+    <groupId>org.ufape</groupId>
+    <artifactId>estoque</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>preco</name>
-    <description>preco</description>
+    <name>estoque</name>
+    <description>estoque</description>
 
     <properties>
         <java.version>17</java.version>
@@ -44,10 +44,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -67,12 +69,6 @@
             <groupId>org.modelmapper</groupId>
             <artifactId>modelmapper</artifactId>
             <version>3.0.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.ufape</groupId>
-            <artifactId>catalogo</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
