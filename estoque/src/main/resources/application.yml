@@ -3,9 +3,10 @@ spring:
     name: estoque
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://127.0.0.1:5432/estoque
-    username: postgres
-    password: docker
+    url: jdbc:postgresql://estoque-db:5432/estoque
+    username: user_estoque
+    password: password_estoque
+
   jpa:
     hibernate:
       ddl-auto: update
