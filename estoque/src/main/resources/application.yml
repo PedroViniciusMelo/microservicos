@@ -42,7 +42,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${DV_ADDRESS}:${DV_PORT}}/eureka
+      defaultZone: http://${DV_ADDRESS}:${DV_PORT}/eureka
     initialInstanceInfoReplicationIntervalSeconds: 5
     registryFetchIntervalSeconds: 5
   instance:
