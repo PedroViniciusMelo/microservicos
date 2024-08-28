@@ -8,87 +8,68 @@ services:
     build: catalogo
     mem_limit: 512m
     environment:
+      - DB=catalogo
+      - DB_ADDRESS=database
+      - DB_USER=docker
+      - DB_PASSWORD=docker
+      - DV_ADDRESS=discovery
+      - DV_PORT=8091
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - database
     ports:
       - "8087:8087"
 
-#  preco-db:
-#    image: postgres:13
-#    container_name: preco-db
-#    environment:
-#      POSTGRES_DB: preco
-#      POSTGRES_USER: user_preco
-#      POSTGRES_PASSWORD: password_preco
-#    ports:
-#      - "5434:5432" # Porta mapeada para evitar conflito com outras instâncias
-#    networks:
-#      - topicosEspeciais
-#
-#  preco:
-#    build: preco
-#    mem_limit: 512m
-#    environment:
-#      - DB_HOST=preco-db
-#      - DB_PORT=5432
-#      - DB_NAME=preco
-#      - DB_USER=user_preco
-#      - DB_PASSWORD=password_preco
-#      - SPRING_PROFILES_ACTIVE=docker
-#    depends_on:
-#      - preco-db
-#    ports:
-#      - "8088:8088"
-#    networks:
-#      - topicosEspeciais
-#
-#  estoque-db:
-#    image: postgres:13
-#    container_name: estoque-db
-#    environment:
-#      POSTGRES_DB: estoque
-#      POSTGRES_USER: user_estoque
-#      POSTGRES_PASSWORD: password_estoque
-#    ports:
-#      - "5435:5432" # Porta mapeada para evitar conflito com outras instâncias
-#    networks:
-#      - topicosEspeciais
-#
-#  estoque:
-#    build: estoque
-#    mem_limit: 512m
-#    environment:
-#      - DB_HOST=estoque-db
-#      - DB_PORT=5432
-#      - DB_NAME=estoque
-#      - DB_USER=user_estoque
-#      - DB_PASSWORD=password_estoque
-#      - SPRING_PROFILES_ACTIVE=docker
-#    depends_on:
-#      - estoque-db
-#    ports:
-#      - "8089:8089"
-#    networks:
-#      - topicosEspeciais
-#
-  eureka-server:
+
+  preco:
+    build: preco
+    mem_limit: 512m
+    environment:
+      - DB=preco
+      - DB_ADDRESS=database
+      - DB_USER=docker
+      - DB_PASSWORD=docker
+      - DV_ADDRESS=discovery
+      - DV_PORT=8091
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - database
+    ports:
+      - "8088:8088"
+
+  estoque:
+    build: estoque
+    mem_limit: 512m
+    environment:
+      - DB=estoque
+      - DB_ADDRESS=database
+      - DB_USER=docker
+      - DB_PASSWORD=docker
+      - DV_ADDRESS=discovery
+      - DV_PORT=8091
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - database
+    ports:
+      - "8089:8089"
+
+  discovery:
     build: discovery
     mem_limit: 512m
     expose:
       - "8091"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-#
-#  gateway:
-#    build: gateway
-#    mem_limit: 512m
-#    ports:
-#      - "8090:8090"
-#    environment:
-#      - SPRING_PROFILES_ACTIVE=docker
-#      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8091/ # Alterado aqui
-#    depends_on:
-#      - eureka-server
-#    networks:
-#      - topicosEspeciais
+
+  gateway:
+    build: gateway
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8091/ # Alterado aqui
+    depends_on:
+      - eureka-server
+    networks:
+      - topicosEspeciais

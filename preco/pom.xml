@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <spring-cloud.version>Hoxton.SR12</spring-cloud.version> <!-- Versão do Spring Cloud -->
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -67,12 +67,6 @@
             <groupId>org.modelmapper</groupId>
             <artifactId>modelmapper</artifactId>
             <version>3.0.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.ufape</groupId>
-            <artifactId>catalogo</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
