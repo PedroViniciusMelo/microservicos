@@ -3,9 +3,9 @@ spring:
     name: catalogo
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://catalogo-db:5432/catalogo
-    username: user_catalogo
-    password: password_catalogo
+    url: jdbc:postgresql://database:5432/catalogo
+    username: docker
+    password: docker
 
   jpa:
     hibernate:
@@ -16,23 +16,23 @@ spring:
 server:
   port: 8087
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
-    initialInstanceInfoReplicationIntervalSeconds: 5
-    registryFetchIntervalSeconds: 5
-  instance:
-    leaseRenewalIntervalInSeconds: 5
-    leaseExpirationDurationInSeconds: 5
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
+#    initialInstanceInfoReplicationIntervalSeconds: 5
+#    registryFetchIntervalSeconds: 5
+#  instance:
+#    leaseRenewalIntervalInSeconds: 5
+#    leaseExpirationDurationInSeconds: 5
 
-spring.security.oauth2.resourceserver.jwt.issuer-uri: http://localhost:8080/realms/residencia
+#spring.security.oauth2.resourceserver.jwt.issuer-uri: http://localhost:8080/realms/residencia
 
----
-spring.config.activate.on-profile: docker
-server.port: 8080
-spring.datasource.url: jdbc:postgresql://172.17.0.1:5432/catalogo
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+#---
+#spring.config.activate.on-profile: docker
+#server.port: 8080
+#spring.datasource.url: jdbc:postgresql://database:5432/catalogo
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://discovery:8761/eureka/

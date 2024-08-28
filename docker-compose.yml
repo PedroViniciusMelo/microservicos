@@ -1,118 +1,94 @@
-version: '2.1'
-
 services:
-  catalogo-db:
-    image: postgres:13
-    container_name: catalogo-db
-    environment:
-      POSTGRES_DB: catalogo
-      POSTGRES_USER: user_catalogo
-      POSTGRES_PASSWORD: password_catalogo
-    ports:
-      - "5433:5432" # Porta mapeada para evitar conflito com outras instâncias
-    networks:
-      - topicosEspeciais
+  database:
+    build: database
+    expose:
+      - "5432"
 
   catalogo:
     build: catalogo
     mem_limit: 512m
     environment:
-      - DB_HOST=catalogo-db
-      - DB_PORT=5432
-      - DB_NAME=catalogo
-      - DB_USER=user_catalogo
-      - DB_PASSWORD=password_catalogo
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
-      - catalogo-db
+      - database
     ports:
       - "8087:8087"
-    networks:
-      - topicosEspeciais
 
-  preco-db:
-    image: postgres:13
-    container_name: preco-db
-    environment:
-      POSTGRES_DB: preco
-      POSTGRES_USER: user_preco
-      POSTGRES_PASSWORD: password_preco
-    ports:
-      - "5434:5432" # Porta mapeada para evitar conflito com outras instâncias
-    networks:
-      - topicosEspeciais
-
-  preco:
-    build: preco
-    mem_limit: 512m
-    environment:
-      - DB_HOST=preco-db
-      - DB_PORT=5432
-      - DB_NAME=preco
-      - DB_USER=user_preco
-      - DB_PASSWORD=password_preco
-      - SPRING_PROFILES_ACTIVE=docker
-    depends_on:
-      - preco-db
-    ports:
-      - "8088:8088"
-    networks:
-      - topicosEspeciais
-
-  estoque-db:
-    image: postgres:13
-    container_name: estoque-db
-    environment:
-      POSTGRES_DB: estoque
-      POSTGRES_USER: user_estoque
-      POSTGRES_PASSWORD: password_estoque
-    ports:
-      - "5435:5432" # Porta mapeada para evitar conflito com outras instâncias
-    networks:
-      - topicosEspeciais
-
-  estoque:
-    build: estoque
-    mem_limit: 512m
-    environment:
-      - DB_HOST=estoque-db
-      - DB_PORT=5432
-      - DB_NAME=estoque
-      - DB_USER=user_estoque
-      - DB_PASSWORD=password_estoque
-      - SPRING_PROFILES_ACTIVE=docker
-    depends_on:
-      - estoque-db
-    ports:
-      - "8089:8089"
-    networks:
-      - topicosEspeciais
-
+#  preco-db:
+#    image: postgres:13
+#    container_name: preco-db
+#    environment:
+#      POSTGRES_DB: preco
+#      POSTGRES_USER: user_preco
+#      POSTGRES_PASSWORD: password_preco
+#    ports:
+#      - "5434:5432" # Porta mapeada para evitar conflito com outras instâncias
+#    networks:
+#      - topicosEspeciais
+#
+#  preco:
+#    build: preco
+#    mem_limit: 512m
+#    environment:
+#      - DB_HOST=preco-db
+#      - DB_PORT=5432
+#      - DB_NAME=preco
+#      - DB_USER=user_preco
+#      - DB_PASSWORD=password_preco
+#      - SPRING_PROFILES_ACTIVE=docker
+#    depends_on:
+#      - preco-db
+#    ports:
+#      - "8088:8088"
+#    networks:
+#      - topicosEspeciais
+#
+#  estoque-db:
+#    image: postgres:13
+#    container_name: estoque-db
+#    environment:
+#      POSTGRES_DB: estoque
+#      POSTGRES_USER: user_estoque
+#      POSTGRES_PASSWORD: password_estoque
+#    ports:
+#      - "5435:5432" # Porta mapeada para evitar conflito com outras instâncias
+#    networks:
+#      - topicosEspeciais
+#
+#  estoque:
+#    build: estoque
+#    mem_limit: 512m
+#    environment:
+#      - DB_HOST=estoque-db
+#      - DB_PORT=5432
+#      - DB_NAME=estoque
+#      - DB_USER=user_estoque
+#      - DB_PASSWORD=password_estoque
+#      - SPRING_PROFILES_ACTIVE=docker
+#    depends_on:
+#      - estoque-db
+#    ports:
+#      - "8089:8089"
+#    networks:
+#      - topicosEspeciais
+#
   eureka-server:
     build: discovery
     mem_limit: 512m
-    ports:
-      - "8091:8091"
     expose:
       - "8091"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-    networks:
-      - topicosEspeciais
-
-  gateway:
-    build: gateway
-    mem_limit: 512m
-    ports:
-      - "8090:8090"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8091/ # Alterado aqui
-    depends_on:
-      - eureka-server
-    networks:
-      - topicosEspeciais
-
-networks:
-  topicosEspeciais:
-    driver: bridge
+#
+#  gateway:
+#    build: gateway
+#    mem_limit: 512m
+#    ports:
+#      - "8090:8090"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=docker
+#      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8091/ # Alterado aqui
+#    depends_on:
+#      - eureka-server
+#    networks:
+#      - topicosEspeciais
