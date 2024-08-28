@@ -18,10 +18,10 @@ logging:
     org.springframework.cloud.gateway: TRACE
 
 spring.cloud.gateway.routes:
-  - id: catalog
-    uri: lb://catalog
+  - id: catalogo
+    uri: lb://catalogo
     predicates:
-      - Path=/catalog/**
+      - Path=/catalogo/**
 
   - id: eureka-web-start
     uri: http://${app.eureka-server}:8761
@@ -38,8 +38,8 @@ spring.cloud.gateway.routes:
 app.eureka-server: localhost
 ---
 spring.config.activate.on-profile: docker
-app.eureka-server: discovery
+app.eureka-server: ${DV_ADDRESS}
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+      defaultZone: http://${DV_ADDRESS}:8761/eureka/

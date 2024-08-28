@@ -14,6 +14,7 @@ import org.ufape.catalogo.controlador.resposta.CategoriaResponse;
 import org.ufape.catalogo.fachada.Catalogo;
 
 @RestController
+@RequestMapping("/catalogo")
 public class ControladorCategoria {
 	@Autowired
 	private Catalogo catalogo;

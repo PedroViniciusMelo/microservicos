@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping("/catalogo")
 public class ControladorProduto {
 	@Autowired
 	private Catalogo catalogo;

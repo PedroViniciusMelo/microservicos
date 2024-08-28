@@ -13,12 +13,12 @@ services:
       - DB_USER=docker
       - DB_PASSWORD=docker
       - DV_ADDRESS=discovery
-      - DV_PORT=8091
+      - DV_PORT=8761
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - database
-    ports:
-      - "8087:8087"
+    expose:
+      - "8087"
 
 
   preco:
@@ -30,12 +30,12 @@ services:
       - DB_USER=docker
       - DB_PASSWORD=docker
       - DV_ADDRESS=discovery
-      - DV_PORT=8091
+      - DV_PORT=8761
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - database
-    ports:
-      - "8088:8088"
+    expose:
+      - "8088"
 
   estoque:
     build: estoque
@@ -46,18 +46,18 @@ services:
       - DB_USER=docker
       - DB_PASSWORD=docker
       - DV_ADDRESS=discovery
-      - DV_PORT=8091
+      - DV_PORT=8761
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - database
-    ports:
-      - "8089:8089"
+    expose:
+      - "8089"
 
   discovery:
     build: discovery
     mem_limit: 512m
     expose:
-      - "8091"
+      - "8761"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
 
@@ -68,8 +68,6 @@ services:
       - "8080:8080"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8091/ # Alterado aqui
+      - DV_ADDRESS=discovery
     depends_on:
-      - eureka-server
-    networks:
-      - topicosEspeciais
+      - discovery
