@@ -7,7 +7,7 @@ services:
       - "5432:5432"
 
   discovery:
-    build: discovery
+    build: discovery-2
     mem_limit: 512m
     ports:
       - "8761:8761"

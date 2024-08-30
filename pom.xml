@@ -19,7 +19,7 @@
         <module>catalogo</module>
         <module>estoque</module>
         <module>preco</module>
-        <module>discovery</module>
+        <module>discovery-2</module>
         <module>gateway</module>
     </modules>
 
