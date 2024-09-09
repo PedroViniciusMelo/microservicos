@@ -1,0 +1,53 @@
+spring.application.name: price
+server.port: 8082
+
+spring.datasource.driver-class-name: org.postgresql.Driver
+spring.datasource.url: jdbc:postgresql://127.0.0.1:5433/price
+spring.datasource.username: docker
+spring.datasource.password: docker
+
+spring.jpa.database: postgresql
+spring.jpa.show-sql: true
+spring.jpa.hibernate.ddl-auto: update
+
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka
+eureka.client.initialInstanceInfoReplicationIntervalSeconds: 5
+eureka.client.registryFetchIntervalSeconds: 5
+eureka.instance.leaseRenewalIntervalInSeconds: 5
+eureka.instance.leaseExpirationDurationInSeconds: 5
+
+app.catalog-service.host: http://localhost:8081/catalog
+
+spring:
+  security:
+    user:
+      name: prometheus
+      password: prometheus
+
+management:
+  server:
+    port: 9092
+  endpoint:
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+
+
+# Docker profile
+
+---
+spring.config.activate.on-profile: docker
+server.port: 8080
+spring.datasource.url: jdbc:postgresql://database:5432/preco
+eureka.client.serviceUrl.defaultZone: http://discovery:8761/eureka/
+
+app.catalog-service.host: http://catalogo:8080/catalogo
+spring.datasource.username: docker
+spring.datasource.password: docker
+
+management:
+  server:
+    port: 9000
