@@ -16,12 +16,6 @@ eureka.client.registryFetchIntervalSeconds: 5
 eureka.instance.leaseRenewalIntervalInSeconds: 5
 eureka.instance.leaseExpirationDurationInSeconds: 5
 
-spring:
-  security:
-    user:
-      name: prometheus
-      password: prometheus
-
 management:
   server:
     port: 9093
