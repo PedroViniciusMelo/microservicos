@@ -28,9 +28,9 @@ spring:
             - Path=/eureka/**
 
         - id: catalog
-          uri: lb://catalog
+          uri: lb://catalogo
           predicates:
-            - Path=/catalog/**
+            - Path=/catalogo/**
 
         - id: storage
           uri: lb://storage
