@@ -1,8 +1,8 @@
-spring.application.name: storage
+spring.application.name: estoque
 server.port: 8083
 
 spring.datasource.driver-class-name: org.postgresql.Driver
-spring.datasource.url: jdbc:postgresql://127.0.0.1:5433/storage
+spring.datasource.url: jdbc:postgresql://127.0.0.1:5433/estoque
 spring.datasource.username: docker
 spring.datasource.password: docker
 
