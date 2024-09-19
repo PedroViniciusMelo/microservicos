@@ -32,10 +32,10 @@ spring:
           predicates:
             - Path=/catalogo/**
 
-        - id: storage
-          uri: lb://storage
+        - id: estoque
+          uri: lb://estoque
           predicates:
-            - Path=/storage/**
+            - Path=/estoque/**
 
         - id: price
           uri: lb://price
