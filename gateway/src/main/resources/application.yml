@@ -37,10 +37,10 @@ spring:
           predicates:
             - Path=/storage/**
 
-        - id: price
-          uri: lb://price
+        - id: preco
+          uri: lb://preco
           predicates:
-            - Path=/price/**
+            - Path=/preco/**
 
 spring.security.oauth2.resourceserver.jwt.issuer-uri: http://keycloak:8080/realms/tees
 
