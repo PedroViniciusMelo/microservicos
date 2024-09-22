@@ -14,8 +14,12 @@ public class CategoriaRequest {
 	private String descricao;
 	private String icone;
 
-	public Categoria converterParaClasseBasica() {
+	private Long pai;
+
+	public Categoria converterParaClasseBasica(Categoria pai) {
 		ModelMapper modelMapper = (ModelMapper) SpringApplicationContext.getBean("modelMapper");
-        return modelMapper.map(this, Categoria.class);
+		Categoria categoria = modelMapper.map(this, Categoria.class);
+		categoria.setPai(pai);
+        return categoria;
 	}
 }

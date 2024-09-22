@@ -16,7 +16,7 @@ public class ProdutoResponse {
 	private String descricao;
 	private String imagem;
 
-	private List<Categoria> categoriaList;
+	private Categoria categoria;
 
 	public ProdutoResponse(Produto produto) {
 		ModelMapper modelMapper = (ModelMapper) SpringApplicationContext.getBean("modelMapper");

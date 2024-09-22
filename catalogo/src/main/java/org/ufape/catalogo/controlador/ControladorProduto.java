@@ -24,7 +24,7 @@ public class ControladorProduto {
 
 	@PostMapping("/produto")
 	Produto cadastrarProduto (@Valid @RequestBody ProdutoRequest newObj) {
-		return catalogo.salvarProduto(newObj.converterParaClasseBasica());
+		return catalogo.salvarProduto(newObj.converterParaClasseBasica(catalogo.encontrarCategoria(newObj.getCategoria())));
 	}
 
 
@@ -34,6 +34,13 @@ public class ControladorProduto {
 		for(Produto c : catalogo.listarProdutos())
 			response.add(new ProdutoResponse(c));
 		return response;
+	}
+
+
+	@PutMapping("/produto/{id}")
+	ProdutoResponse atualizarProduto(@PathVariable long id, @Valid @RequestBody ProdutoRequest newObj) {
+		Produto c = catalogo.atualizarProduto(id, newObj.converterParaClasseBasica(catalogo.encontrarCategoria(newObj.getCategoria())));
+		return new ProdutoResponse(c);
 	}
 
 	@GetMapping("/produto/categoria/{categoria}")

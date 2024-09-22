@@ -18,4 +18,6 @@ public interface InterfaceCadastroProduto {
 	Produto encontrarProdutoId(Long id);
 
 	void apagarProduto(Long id);
+
+	Produto atualizarProduto(Long id, Produto entity);
 }
