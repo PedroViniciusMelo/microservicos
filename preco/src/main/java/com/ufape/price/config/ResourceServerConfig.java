@@ -19,7 +19,7 @@ public class ResourceServerConfig {
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2
                         .jwt(jwt -> jwt
-                                .jwkSetUri("http://keycloak:8080/realms/tees/protocol/openid-connect/certs") // URI do conjunto de chaves JWK do Keycloak
+                                .jwkSetUri("http://keycloak:8080/realms/servicos/protocol/openid-connect/certs") // URI do conjunto de chaves JWK do Keycloak
                         )
                 );
         return http.build();

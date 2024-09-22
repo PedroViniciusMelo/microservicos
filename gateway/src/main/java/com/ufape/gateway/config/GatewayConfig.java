@@ -24,7 +24,7 @@ public class GatewayConfig {
             .oauth2ResourceServer(oauth2 -> {
                 oauth2.jwt(jwt -> {
                     // Adicione depuração para verificar o JWKS URI
-                    jwt.jwtDecoder(new NimbusReactiveJwtDecoder("http://keycloak:8080/realms/tees/protocol/openid-connect/certs"));
+                    jwt.jwtDecoder(new NimbusReactiveJwtDecoder("http://keycloak:8080/realms/servicos/protocol/openid-connect/certs"));
                 });
             });
         return http.build();
