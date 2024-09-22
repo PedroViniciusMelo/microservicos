@@ -15,5 +15,6 @@ public class Categoria {
 	private String icone;
 	
 	@ManyToOne
-	private Categoria categoriaPai;
+	@JoinColumn(name = "categoria_pai_id")
+	private Categoria pai;
 }

@@ -36,6 +36,9 @@ public class Catalogo {
 	public List<Produto> listarProdutosPorCategoria(String nome) {
 		return cadastroProduto.listarProdutosPorCategoria(nome);
 	}
+	public Produto atualizarProduto(Long id, Produto produto) {
+		return cadastroProduto.atualizarProduto(id, produto);
+	}
 	public Produto salvarProduto(Produto entity) {
 		return cadastroProduto.salvarProduto(entity);
 	}

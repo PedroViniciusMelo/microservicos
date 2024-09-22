@@ -24,7 +24,10 @@ public class ControladorCategoria {
 	
 	@PostMapping("/categoria")
 	Categoria cadastrarCategoria (@Valid @RequestBody CategoriaRequest newObj) {
-		return catalogo.salvarCategoria(newObj.converterParaClasseBasica());
+		if (newObj.getPai() == null)
+			return catalogo.salvarCategoria(newObj.converterParaClasseBasica(null));
+		Categoria pai = catalogo.encontrarCategoria(newObj.getPai());
+		return catalogo.salvarCategoria(newObj.converterParaClasseBasica(pai));
 	}
 
 	@GetMapping("/categoria")
@@ -47,6 +50,9 @@ public class ControladorCategoria {
 
 	@PutMapping("/categoria/{id}")
 	CategoriaResponse atualizarCategoria(@PathVariable long id, @Valid @RequestBody CategoriaRequest newObj) {
-		return new CategoriaResponse(catalogo.atualizarCategoria(id, newObj.converterParaClasseBasica()));
+		if (newObj.getPai() == null)
+			return new CategoriaResponse(catalogo.atualizarCategoria(id, newObj.converterParaClasseBasica(null)));
+		Categoria pai = catalogo.encontrarCategoria(newObj.getPai());
+		return new CategoriaResponse(catalogo.atualizarCategoria(id, newObj.converterParaClasseBasica(pai)));
 	}
 }

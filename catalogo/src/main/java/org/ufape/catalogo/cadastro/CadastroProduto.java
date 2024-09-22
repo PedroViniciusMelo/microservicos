@@ -49,4 +49,19 @@ public class CadastroProduto implements InterfaceCadastroProduto {
 	public void apagarProduto(Long id) {
 		repositorioProduto.deleteById(id);
 	}
+
+	@Override
+	public Produto atualizarProduto(Long id, Produto entity) {
+		Optional<Produto> optional = repositorioProduto.findById(id);
+		if  (optional.isPresent()) {
+			Produto produto = optional.get();
+			produto.setNome(entity.getNome());
+			produto.setDescricao(entity.getDescricao());
+			produto.setCategoria(entity.getCategoria());
+			produto.setImagem(entity.getImagem());
+			return repositorioProduto.save(produto);
+		} else {
+			throw new ObjetoNaoEncontradoException("Não existe categoria com o id: " + id);
+		}
+ 	}
 }
