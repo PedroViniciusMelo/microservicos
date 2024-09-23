@@ -91,24 +91,19 @@ services:
   grafana:
     image: grafana/grafana:9.5.2
     container_name: grafana
+    environment:
+      - GF_SMTP_ENABLED=true
+      - GF_SMTP_SKIP_VERIFY=true
+      - GF_SMTP_HOST=maildev:1025
+      - GF_SMTP_FROM_ADDRESS=grafana@minikube.me
     ports:
       - "3000:3000"
     restart: unless-stopped
     volumes:
       - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
-#
-#
-#  autenticacao:
-#    build: autenticacao
-#    mem_limit: 512m
-#    ports:
-#      - "9090:9090"
-#    environment:
-#      - SPRING_PROFILES_ACTIVE=docker
-#    depends_on:
-#      - keycloak
-##
-volumes:
-  postgres-catalog-data:
-  postgres-price-data:
-  postgres-storage-data:
+
+  maildev:
+    image: maildev/maildev
+    ports:
+      - "1080:1080"
+      - "1025:1025"
