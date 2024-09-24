@@ -55,10 +55,10 @@ public class ControladorEstoque {
     }
 
     @GetMapping("/estoque/armazem/{nome}")
-    public List<EstoqueResposta> listarEstoquesPeloArmazem(@PathVariable String name) {
+    public List<EstoqueResposta> listarEstoquesPeloArmazem(@PathVariable String nome) {
         List<EstoqueResposta> response = new ArrayList<>();
 
-        for (Estoque estoque : fachada.listarEstoquesPeloArmazem(name)) {
+        for (Estoque estoque : fachada.listarEstoquesPeloArmazem(nome)) {
             response.add(new EstoqueResposta(estoque));
         }
 
