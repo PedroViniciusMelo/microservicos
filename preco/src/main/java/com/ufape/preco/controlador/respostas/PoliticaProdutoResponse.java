@@ -15,6 +15,7 @@ public class PoliticaProdutoResponse {
     private String tipo;
     private String descricao;
     private String regra;
+    private String nome;
 
     public PoliticaPreco converterParaClasseBasica() {
         ModelMapper modelMapper = (ModelMapper) SpringApplicationContext.getBean("modelMapper");

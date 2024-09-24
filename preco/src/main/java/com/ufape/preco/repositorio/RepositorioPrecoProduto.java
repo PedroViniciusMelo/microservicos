@@ -16,5 +16,7 @@ public interface RepositorioPrecoProduto extends JpaRepository<PrecoProduto, Lon
 
     List<PrecoProduto> findAllByProdutoId(Long produtoId);
 
+    PrecoProduto findByNomeIgnoreCase(String nome);
+
 
 }

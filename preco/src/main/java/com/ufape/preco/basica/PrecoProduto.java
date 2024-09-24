@@ -1,12 +1,14 @@
 package com.ufape.preco.basica;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
 
-@Entity @Setter @Getter
+@Data
+@Entity
 public class PrecoProduto {
 
     @Id
@@ -16,6 +18,5 @@ public class PrecoProduto {
     private Date dataInicio;
     private Date dataFim;
     private Long produtoId;
-
 
 }

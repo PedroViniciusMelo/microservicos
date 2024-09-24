@@ -19,6 +19,9 @@ public class PoliticaPrecoRequest {
     @NotBlank(message = "A regra é obrigatória")
     private String regra;
 
+    @NotBlank(message = "O nome é obrigatório")
+    private String nome;
+
     public PoliticaPreco converterParaClasseBasica() {
         ModelMapper modelMapper = (ModelMapper) SpringApplicationContext.getBean("modelMapper");
         return modelMapper.map(this, PoliticaPreco.class);

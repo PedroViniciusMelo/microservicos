@@ -7,6 +7,7 @@ import com.ufape.preco.repositorio.RepositorioPrecoProduto;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CadastroPrecoProduto implements InterfaceCadastroPrecoProduto {
@@ -23,21 +24,36 @@ public class CadastroPrecoProduto implements InterfaceCadastroPrecoProduto {
 
     @Override
     public List<PrecoProduto> listarPrecosDeProduto(Long produtoId) {
-        return repositorioPrecoProduto.findAllByProdutoId(produtoId);
+        PrecoProduto optional = repositorioPrecoProduto.findByProdutoId(produtoId);
+        if(optional != null) {
+            return (List<PrecoProduto>) repositorioPrecoProduto.findByProdutoId(produtoId);
+        } else {
+            throw new ObjetoNaoEncontradoException("Não existe preço para o produto com o id: " + produtoId);
+        }
     }
 
     @Override
     public PrecoProduto encontrarPrecoProduto(Long id) {
-        return repositorioPrecoProduto.findByProdutoId(id);
+        Optional<PrecoProduto> optional = repositorioPrecoProduto.findById(id);
+
+        if(optional.isPresent()) {
+            return optional.get();
+        } else {
+            throw new ObjetoNaoEncontradoException("Não existe preço com o id: " + id);
+        }
     }
 
     @Override
     public PrecoProduto atualizarPrecoProduto(Long id, PrecoProduto preco) {
-        PrecoProduto precoAtual = repositorioPrecoProduto.findByProdutoId(id);
-        Date dataFim = new Date();
-        precoAtual.setDataFim(dataFim);
-        repositorioPrecoProduto.save(precoAtual);
-        return repositorioPrecoProduto.save(preco);
+        Optional<PrecoProduto> optional = repositorioPrecoProduto.findById(id);
+        if  (optional.isPresent()) {
+            PrecoProduto precoProduto = optional.get();
+            precoProduto.setValor(preco.getValor());
+            precoProduto.setDataFim(preco.getDataFim());
+            return repositorioPrecoProduto.save(precoProduto);
+        } else {
+            throw new ObjetoNaoEncontradoException("Não existe preço com o id: " + id);
+        }
     }
 
 }
