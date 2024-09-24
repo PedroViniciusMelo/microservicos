@@ -7,10 +7,7 @@ import com.ufape.preco.repositorio.RepositorioPrecoProduto;
 
 import java.util.Date;
 import java.util.List;
-<<<<<<< HEAD
 import java.util.Optional;
-=======
->>>>>>> 43634c0 (refatoracao)
 
 @Service
 public class CadastroPrecoProduto implements InterfaceCadastroPrecoProduto {
@@ -27,21 +24,16 @@ public class CadastroPrecoProduto implements InterfaceCadastroPrecoProduto {
 
     @Override
     public List<PrecoProduto> listarPrecosDeProduto(Long produtoId) {
-<<<<<<< HEAD
         PrecoProduto optional = repositorioPrecoProduto.findByProdutoId(produtoId);
         if(optional != null) {
             return (List<PrecoProduto>) repositorioPrecoProduto.findByProdutoId(produtoId);
         } else {
             throw new ObjetoNaoEncontradoException("Não existe preço para o produto com o id: " + produtoId);
         }
-=======
-        return repositorioPrecoProduto.findAllByProdutoId(produtoId);
->>>>>>> 43634c0 (refatoracao)
     }
 
     @Override
     public PrecoProduto encontrarPrecoProduto(Long id) {
-<<<<<<< HEAD
         Optional<PrecoProduto> optional = repositorioPrecoProduto.findById(id);
 
         if(optional.isPresent()) {
@@ -49,14 +41,10 @@ public class CadastroPrecoProduto implements InterfaceCadastroPrecoProduto {
         } else {
             throw new ObjetoNaoEncontradoException("Não existe preço com o id: " + id);
         }
-=======
-        return repositorioPrecoProduto.findByProdutoId(id);
->>>>>>> 43634c0 (refatoracao)
     }
 
     @Override
     public PrecoProduto atualizarPrecoProduto(Long id, PrecoProduto preco) {
-<<<<<<< HEAD
         Optional<PrecoProduto> optional = repositorioPrecoProduto.findById(id);
         if  (optional.isPresent()) {
             PrecoProduto precoProduto = optional.get();
@@ -66,13 +54,6 @@ public class CadastroPrecoProduto implements InterfaceCadastroPrecoProduto {
         } else {
             throw new ObjetoNaoEncontradoException("Não existe preço com o id: " + id);
         }
-=======
-        PrecoProduto precoAtual = repositorioPrecoProduto.findByProdutoId(id);
-        Date dataFim = new Date();
-        precoAtual.setDataFim(dataFim);
-        repositorioPrecoProduto.save(precoAtual);
-        return repositorioPrecoProduto.save(preco);
->>>>>>> 43634c0 (refatoracao)
     }
 
 }
