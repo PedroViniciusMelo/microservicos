@@ -23,6 +23,8 @@ public class Fachada {
         return interfaceEstoque.salvarEstoque(entidade);
     }
 
+    public boolean verificarProdutoNoCatalogo(long produtoId) { return interfaceEstoque.verificarProdutoNoCatalogo(produtoId);}
+
     public List<Estoque> listarEstoques() {
         return interfaceEstoque.listarEstoques();
     }

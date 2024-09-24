@@ -31,6 +31,12 @@ public class ControladorEstoque {
             throw new ObjetoNaoEncontradoException("Armazem com id " + newObj.getArmazem() + " nao encontrado");
         }
 
+        boolean produtoExiste = fachada.verificarProdutoNoCatalogo(newObj.getProdutoId());
+        System.out.println("TO AQUI"+ newObj.getProdutoId());
+        if (!produtoExiste) {
+            throw new ObjetoNaoEncontradoException("Produto com id " + newObj.getProdutoId() + " nao encontrado no catalogo");
+        }
+
         Estoque estoque = newObj.converterParaClasseBasica();
         estoque.setArmazem(armazem);
 

@@ -4,6 +4,8 @@ import com.topicos.estoque.basica.Estoque;
 import com.topicos.estoque.repositorio.EstoqueRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +15,9 @@ public class CadastroEstoque implements InterfaceEstoque {
 
     @Autowired
     private EstoqueRepositorio estoqueRepositorio;
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     @Override
     public Estoque salvarEstoque(Estoque entidade) {
@@ -65,5 +70,22 @@ public class CadastroEstoque implements InterfaceEstoque {
         estoque.setArmazem(entidade.getArmazem());
 
         return estoqueRepositorio.save(estoque);
+    }
+
+    @Override
+    public boolean verificarProdutoNoCatalogo(long produtoId) {
+        String url = "http://catalogo/produto" + produtoId;
+        try {
+            System.out.println("Verificando produto no catálogo: ID " + produtoId);
+            restTemplate.headForHeaders(url);
+            System.out.println("Produto encontrado no catálogo.");
+            return true;
+        } catch (HttpClientErrorException.NotFound e) {
+            System.out.println("Produto não encontrado no catálogo: ID " + produtoId);
+            return false;
+        } catch (Exception e) {
+            System.out.println("Erro ao verificar o produto no catálogo: " + e.getMessage());
+            throw new RuntimeException("Erro ao verificar o produto no catálogo", e);
+        }
     }
 }

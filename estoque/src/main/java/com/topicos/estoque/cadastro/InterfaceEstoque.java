@@ -16,4 +16,6 @@ public interface InterfaceEstoque {
     Estoque buscarEstoque(Long id);
 
     void apagarEstoque(Long id);
+
+    boolean verificarProdutoNoCatalogo(long produtoId);
 }
