@@ -1,8 +1,12 @@
 package com.topicos.estoque.cadastro;
 
+import com.topicos.core.ProductDTO;
 import com.topicos.estoque.basica.Estoque;
 import com.topicos.estoque.repositorio.EstoqueRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
@@ -16,8 +20,14 @@ public class CadastroEstoque implements InterfaceEstoque {
     @Autowired
     private EstoqueRepositorio estoqueRepositorio;
 
-    @Autowired
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
+
+    @Value("${app.catalogo-service.host}")
+    private String catalogoHost;
+
+    public CadastroEstoque(RestTemplate restTemplate, DiscoveryClient discoveryClient) {
+        this.restTemplate = restTemplate;
+    }
 
     @Override
     public Estoque salvarEstoque(Estoque entidade) {
@@ -74,10 +84,11 @@ public class CadastroEstoque implements InterfaceEstoque {
 
     @Override
     public boolean verificarProdutoNoCatalogo(long produtoId) {
-        String url = "http://catalogo/produto" + produtoId;
+        String url = "http://catalogo/catalogo/produto/" + produtoId; // 'catalogo' é o nome do serviço registrado
+
         try {
             System.out.println("Verificando produto no catálogo: ID " + produtoId);
-            restTemplate.headForHeaders(url);
+            ProductDTO produto = restTemplate.getForObject(url, ProductDTO.class);
             System.out.println("Produto encontrado no catálogo.");
             return true;
         } catch (HttpClientErrorException.NotFound e) {
@@ -88,4 +99,5 @@ public class CadastroEstoque implements InterfaceEstoque {
             throw new RuntimeException("Erro ao verificar o produto no catálogo", e);
         }
     }
+
 }
