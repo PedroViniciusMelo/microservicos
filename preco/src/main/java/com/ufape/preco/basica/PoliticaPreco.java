@@ -18,5 +18,4 @@ public class PoliticaPreco {
     private String tipo;
     private String descricao;
     private String regra;
-    private String nome;
 }

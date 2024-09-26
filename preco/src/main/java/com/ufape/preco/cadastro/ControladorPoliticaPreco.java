@@ -16,11 +16,7 @@ public class ControladorPoliticaPreco implements InterfaceCadastroPoliticaPreco{
 
     @Override
     public PoliticaPreco salvarPolitica(PoliticaPreco entity) {
-        if(repositorioPoliticaPreco.findByNomeIgnoreCase(entity.getNome()) == null) {
-            return repositorioPoliticaPreco.save(entity);
-        } else {
-            throw new RuntimeException("A política ["+ entity.getNome() + "] já se encontra cadastrada no sistema.");
-        }
+        return repositorioPoliticaPreco.save(entity);
     }
 
     @Override
@@ -38,7 +34,6 @@ public class ControladorPoliticaPreco implements InterfaceCadastroPoliticaPreco{
         Optional<PoliticaPreco> optional = repositorioPoliticaPreco.findById(id);
         if  (optional.isPresent()) {
             PoliticaPreco politicaPreco = optional.get();
-            politicaPreco.setNome(politica.getNome());
             politicaPreco.setDescricao(politica.getDescricao());
             politicaPreco.setRegra(politica.getRegra());
             return repositorioPoliticaPreco.save(politicaPreco);
