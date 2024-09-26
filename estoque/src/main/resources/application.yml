@@ -27,6 +27,9 @@ management:
       exposure:
         include: prometheus
 
+app:
+  review-service:
+    host: http://localhost:8082
 
 # Docker profile
 
@@ -38,6 +41,7 @@ spring.datasource.url: jdbc:postgresql://database:5432/estoque
 eureka.client.serviceUrl.defaultZone: http://discovery:8761/eureka/
 spring.datasource.username: docker
 spring.datasource.password: docker
+app.catalogo-service.host: http://catalogo
 
 management:
   server:
