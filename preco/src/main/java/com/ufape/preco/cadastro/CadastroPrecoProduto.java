@@ -56,4 +56,14 @@ public class CadastroPrecoProduto implements InterfaceCadastroPrecoProduto {
         }
     }
 
+    @Override
+    public PrecoProduto salvarPrecoParaProduto(Long produtoId){
+        PrecoProduto preco = new PrecoProduto();
+        Date dataInicio = new Date();
+        preco.setDataInicio(dataInicio);
+        preco.setProdutoId(produtoId);
+        preco.setValor(0.0);
+        return salvarPreco(preco);
+    }
+
 }

@@ -29,6 +29,35 @@ management:
       exposure:
         include: prometheus
 
+spring:
+  cloud:
+    function:
+      definition: consumeMessage
+    stream:
+      defaultBinder: rabbit
+      default:
+        contentType: application/json
+      bindings:
+        consumeMessage-in-0:
+          destination: inventory
+          group: inventoriesGroup
+          consumer:
+            maxAttempts: 3
+            backOffInitialInterval: 500
+            backOffMaxInterval: 1000
+            backOffMultiplier: 2.0
+      rabbit:
+        bindings:
+          consumeMessage-in-0:
+            consumer:
+              autoBindDlq: true
+              republishToDlq: true
+  rabbitmq:
+    host: message
+    port: 5672
+    username: guest
+    password: guest
+
 
 # Docker profile
 

@@ -11,6 +11,11 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+  rabbitmq:
+    host: message
+    port: 5672
+    username: guest
+    password: guest
 
 server:
   port: 8081
@@ -35,6 +40,15 @@ management:
     web:
       exposure:
         include: prometheus
+
+
+spring.cloud.stream:
+  defaultBinder: rabbit
+  default.contentType: application/json
+  bindings.consumeMessage-in-0:
+    destination: inventory
+    group: inventoriesGroup
+
 
 
 # Docker profile
