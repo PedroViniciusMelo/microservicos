@@ -5,6 +5,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.ufape.catalogo.basica.Produto;
+import org.ufape.catalogo.config.RabbitMQSender;
 import org.ufape.catalogo.controlador.requisicao.ProdutoRequest;
 import org.ufape.catalogo.controlador.resposta.ProdutoResponse;
 import org.ufape.catalogo.fachada.Catalogo;
@@ -21,10 +22,15 @@ public class ControladorProduto {
 	@Autowired
 	private ModelMapper modelMapper;
 
+	@Autowired
+	private RabbitMQSender rabbitMQSender;
+
 
 	@PostMapping("/produto")
 	Produto cadastrarProduto (@Valid @RequestBody ProdutoRequest newObj) {
-		return catalogo.salvarProduto(newObj.converterParaClasseBasica(catalogo.encontrarCategoria(newObj.getCategoria())));
+		 Produto novoProduto = catalogo.salvarProduto(newObj.converterParaClasseBasica(catalogo.encontrarCategoria(newObj.getCategoria())));
+		 rabbitMQSender.sendProdutoId(novoProduto.getId());
+		 return novoProduto;
 	}
 
 
