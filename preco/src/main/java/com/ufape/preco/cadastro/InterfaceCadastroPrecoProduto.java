@@ -15,4 +15,6 @@ public interface InterfaceCadastroPrecoProduto {
         PrecoProduto encontrarPrecoProduto(Long id);
 
         PrecoProduto atualizarPrecoProduto(Long id, PrecoProduto preco);
+
+    PrecoProduto salvarPrecoParaProduto(Long produtoId);
 }

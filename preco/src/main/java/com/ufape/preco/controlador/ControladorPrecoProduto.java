@@ -27,8 +27,8 @@ public class ControladorPrecoProduto {
     }
 
     @GetMapping("/preco/produto/{produtoId}")
-    PrecoProdutoResponse carregarPreco(@PathVariable Long id) {
-        return new PrecoProdutoResponse(cadastroPreco.encontrarPrecoProduto(id));
+    PrecoProdutoResponse carregarPreco(@PathVariable Long produtoId) {
+        return new PrecoProdutoResponse(cadastroPreco.encontrarPrecoProduto(produtoId));
     }
 
     @GetMapping("/preco/produto/historico_precos/{produtoId}")
